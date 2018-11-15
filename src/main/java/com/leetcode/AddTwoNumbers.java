@@ -2,7 +2,7 @@ package com.leetcode;
 
 
 class AddTwoNumbers {
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -39,5 +39,30 @@ class AddTwoNumbers {
             cur.next = new ListNode(1);
         }
         return ret;
+    }
+
+    public static ListNode makeList(int[] a) {
+        ListNode head = null, current = null;
+        for (int anA : a) {
+            if (head == null) {
+                head = new ListNode(anA);
+                head.next = null;
+                current = head;
+
+            } else {
+                current.next = new ListNode(anA);
+                current = current.next;
+            }
+        }
+        return head;
+    }
+
+    public static void main(String[] args) {
+        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        ListNode sumNode = addTwoNumbers.addTwoNumbers(makeList(new int[]{1, 2}), makeList(new int[]{3, 4}));
+        for (ListNode curr = sumNode; curr != null; curr = curr.next) {
+            System.out.print(curr.val);
+        }
+        System.out.println();
     }
 }
