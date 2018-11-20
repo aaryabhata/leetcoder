@@ -36,13 +36,13 @@ public class SpiralMatrixII {
         return matrix;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SpiralMatrixII spiralMatrixII = new SpiralMatrixII();
-        int n= 5;
-        int[][] res =spiralMatrixII.generateMatrix(n);
-        for (int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                System.out.print(res[i][j]+"   ");
+        int n = 5;
+        int[][] res = spiralMatrixII.generateMatrix(n);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(res[i][j] + "   ");
             }
             System.out.println();
         }

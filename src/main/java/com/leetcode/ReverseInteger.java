@@ -9,16 +9,16 @@ public class ReverseInteger {
             x *= -1;
         }
         while (x > 0) {
-            int lastDigit = x%10;
-            int remaining = x/10;
-            if (reverse - lastDigit >= Integer.MAX_VALUE/10)
+            int lastDigit = x % 10;
+            int remaining = x / 10;
+            if (reverse - lastDigit >= Integer.MAX_VALUE / 10)
                 return 0;
-            reverse = 10* reverse + lastDigit;
+            reverse = 10 * reverse + lastDigit;
             x = remaining;
         }
-        return isNegative? -1 * reverse: reverse;
+        return isNegative ? -1 * reverse : reverse;
     }
-    
+
     public static void main(String[] args) {
         ReverseInteger reverseInteger = new ReverseInteger();
 
